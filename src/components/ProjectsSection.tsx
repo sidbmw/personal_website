@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import Link from 'next/link'; // Use Next.js Link for internal/external links if needed
 
 const projectsData = [
   {
