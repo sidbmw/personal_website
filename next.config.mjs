@@ -5,10 +5,12 @@ const withMDX = mdx({
   options: {},
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/personal_website',
+  output: isProd ? 'export' : undefined,
+  basePath: isProd ? '/personal_website' : undefined,
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   images: { unoptimized: true },
 };
