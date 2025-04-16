@@ -7,7 +7,7 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Vehicle Onboarding Engineer",
-  avatar: "/images/avatar.jpg",
+  avatar: "images/avatar.jpg",
   location: "America/Toronto",
   languages: ["English"],
 };
