@@ -8,6 +8,7 @@ const withMDX = mdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/personal_website',
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   images: { unoptimized: true },
 };
