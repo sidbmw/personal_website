@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth Natamai - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'primary-dark': '#1d4ed8',
+                        'secondary': '#64748b',
+                        'accent': '#f59e0b',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="font-inter text-gray-900 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-xl font-bold gradient-text">Siddharth Natamai</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
+                        <a href="#about" class="nav-link hover:text-primary transition-colors">About</a>
+                        <a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a>
+                        <a href="#experience" class="nav-link hover:text-primary transition-colors">Experience</a>
+                        <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-primary">Experience</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Hi, I'm <span class="gradient-text">Siddharth Natamai</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-8 font-medium">
+                    Computer Science Graduate & Software Developer
+                </h2>
+                <p class="text-lg text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Passionate about mobile development, AI integration, and automotive technology. 
+                    I build innovative solutions that solve real-world problems and have served thousands of users.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#projects" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-colors transform hover:scale-105">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/siddharthnatamai" target="_blank" class="text-gray-600 hover:text-primary text-2xl transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/siddharthnatamai" target="_blank" class="text-gray-600 hover:text-primary text-2xl transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:siddharth@example.com" class="text-gray-600 hover:text-primary text-2xl transition-colors">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Computer Science graduate with a passion for innovation</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        I am a Computer Science graduate from Carleton University with extensive experience in 
+                        full-stack development, AI integration, and mobile applications. Over three years at 
+                        BlackBerry QNX, I contributed to the evolution of the QNX Software Development Platform 
+                        from version 7.1 to 8.0.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Currently, I'm expanding Sidecar's vehicle compatibility by discovering and testing 
+                        proprietary OBD-II PIDs across various models, while also developing innovative iOS 
+                        applications and AI-powered platforms that have served thousands of users.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-semibold text-gray-900 mb-4">Languages & Frameworks</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Swift</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SwiftUI</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-semibold text-gray-900 mb-4">Specializations</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">iOS Development</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">AI Integration</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Automotive Tech</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Full-Stack SaaS</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">GraphQL APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A showcase of my recent work and technical achievements</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Reps Project -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i class="fas fa-dumbbell text-4xl mb-2"></i>
+                                <p class="text-lg font-semibold">AI Fitness Coach</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Reps - AI Fitness Coach</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            AI-powered fitness platform integrating 33+ HealthKit metrics with conversational AI coaching. 
+                            Features SwiftUI interface, Apple Watch integration, and Firebase backend.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">SwiftUI</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">HealthKit</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Firebase</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Gemini AI</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/siddharthnatamai/reps" target="_blank" class="flex items-center text-primary hover:text-primary-dark">
+                                <i class="fab fa-github mr-2"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OctaneBuddy Project -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-blue-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i class="fas fa-gas-pump text-4xl mb-2"></i>
+                                <p class="text-lg font-semibold">3,000+ Users</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">OctaneBuddy</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            iOS fuel tracking app that served 3,000+ users. Featured custom OCR engine, CarPlay integration, 
+                            and 15+ API integrations across 6 countries for real-time fuel prices.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">SwiftUI</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Vision Framework</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">CarPlay</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">GraphQL</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/siddharthnatamai/octanebuddy" target="_blank" class="flex items-center text-primary hover:text-primary-dark">
+                                <i class="fab fa-github mr-2"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Marketing AI Project -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i class="fas fa-envelope text-4xl mb-2"></i>
+                                <p class="text-lg font-semibold">SaaS Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Email Marketing AI Platform</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Full-stack SaaS platform for AI-powered email marketing with GitHub integration, 
+                            complete authentication system, and Stripe payment processing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Next.js</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">TypeScript</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">PostgreSQL</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Claude AI</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/siddharthnatamai/email-marketing-ai" target="_blank" class="flex items-center text-primary hover:text-primary-dark">
+                                <i class="fab fa-github mr-2"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidecar Project -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-orange-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i class="fas fa-car text-4xl mb-2"></i>
+                                <p class="text-lg font-semibold">Automotive Tech</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sidecar OBD-II Platform</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Intelligent automation system for automotive OBD-II signalset generation. 
+                            Achieved 100% success rate processing multiple vehicle models with comprehensive quality assurance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">GitHub API</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">CAN Studio</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">iOS</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <span class="text-gray-500 flex items-center">
+                                <i class="fas fa-briefcase mr-2"></i>
+                                Professional Project
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Professional journey and key achievements</p>
+            </div>
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-200"></div>
+                <div class="space-y-12">
+                    <!-- Current Role -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 mr-8 text-right">
+                            <h3 class="text-xl font-bold text-gray-900">Software Developer</h3>
+                            <p class="text-primary font-semibold">Sidecar/Clutch Engineering</p>
+                            <p class="text-gray-600 mt-2">
+                                Expanding vehicle compatibility by discovering proprietary OBD-II PIDs, analyzing CAN frames, 
+                                and contributing production code including Spotify integration and maintenance systems.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0 w-4 h-4 bg-primary rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 ml-8">
+                            <span class="text-sm text-gray-500">Present</span>
+                        </div>
+                    </div>
+
+                    <!-- BlackBerry QNX -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 mr-8 text-right">
+                            <span class="text-sm text-gray-500">3 Years</span>
+                        </div>
+                        <div class="flex-shrink-0 w-4 h-4 bg-gray-400 rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 ml-8">
+                            <h3 class="text-xl font-bold text-gray-900">Software Developer</h3>
+                            <p class="text-primary font-semibold">BlackBerry QNX</p>
+                            <p class="text-gray-600 mt-2">
+                                Contributed to QNX Software Development Platform evolution from version 7.1 to 8.0. 
+                                Focused on kernel and filesystem enhancements, unit testing optimization, and QNX OS for Safety releases.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 mr-8 text-right">
+                            <h3 class="text-xl font-bold text-gray-900">Computer Science Graduate</h3>
+                            <p class="text-primary font-semibold">Carleton University</p>
+                            <p class="text-gray-600 mt-2">
+                                Graduated with extensive knowledge in software engineering, algorithms, and system design. 
+                                Specialized in mobile development and embedded systems.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0 w-4 h-4 bg-gray-400 rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 ml-8">
+                            <span class="text-sm text-gray-500">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Let's discuss opportunities and collaborations</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-envelope text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Email</h3>
+                            <p class="text-gray-600">siddharth@example.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="fab fa-linkedin text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">LinkedIn</h3>
+                            <p class="text-gray-600">linkedin.com/in/siddharthnatamai</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <i class="fab fa-github text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">GitHub</h3>
+                            <p class="text-gray-600">github.com/siddharthnatamai</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="space-y-6">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors">
+                        </div>
+                        <div>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors">
+                        </div>
+                        <div>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2024 Siddharth Natamai. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/siddharthnatamai" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/siddharthnatamai" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
